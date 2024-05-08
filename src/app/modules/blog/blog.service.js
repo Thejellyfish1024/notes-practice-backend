@@ -1,8 +1,13 @@
 const blog = require("./blog.model")
 
+exports.getAllBlogsService = async () => {
+    const result = await blog?.find({}).select({
+        status: 0
+    });
+    return result;
+}
+
 exports.createBlogsService = async (data) => {
-    // console.log('coming');
     const result = await blog?.create(data);
-    // console.log('result', result);
     return result;
 }

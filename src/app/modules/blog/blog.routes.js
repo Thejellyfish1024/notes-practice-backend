@@ -1,10 +1,10 @@
 const express = require('express');
-const { createBlog } = require('./blog.controller');
+const { createBlog, getAllBlogs } = require('./blog.controller');
 
 const router = express?.Router();
 
 // get all blogs
-router.get('/', )
+router.get('/', getAllBlogs)
 
 router.post('/', createBlog);
 
