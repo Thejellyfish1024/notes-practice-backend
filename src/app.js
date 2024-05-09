@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const blogRoutes = require("./app/modules/blog/blog.routes");
 const productRoutes = require("./app/modules/product/product.routes");
+const userRoutes = require("./app/modules/user/user.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/blog", blogRoutes);
 app.use("/product", productRoutes);
+app.use("/user", userRoutes);
 
 
 module.exports = app;
