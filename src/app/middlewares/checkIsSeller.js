@@ -3,9 +3,9 @@ const User = require("../modules/user/user.model");
 exports.checkIsSeller = async (req, res, next) => {
   try {
     const { sellerEmail } = req.query;
-    console.log("sellerEmail", sellerEmail);
+    // console.log("sellerEmail", sellerEmail);
     const isSeller = await User.findOne({ email: sellerEmail, role: "seller" })
-    console.log(isSeller);
+    // console.log(isSeller);
 
     if (!isSeller) {
       return res.status(401).json({
