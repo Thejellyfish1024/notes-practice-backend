@@ -41,3 +41,120 @@ exports.updateProduct = async (req, res) => {
     }
 }
 
+
+
+  // // Get filtered products with both category and gender
+    // if (category && gender && !isNaN(minPrice) && !isNaN(maxPrice)) {
+    //   await mongoose.connect(process.env.DATABASE_URL);
+
+    //   // total products count
+    //   const totalProducts = await Product.countDocuments({
+    //     category: new RegExp(`\\b${category}\\b`, 'i'),
+    //     gender: new RegExp(`\\b${gender}\\b`, 'i'),
+    //     price: { $gte: minPrice, $lte: maxPrice }
+    //   });
+
+    //   // result 
+    //   const result = await Product?.find(
+    //     {
+    //       category: new RegExp(`\\b${category}\\b`, 'i'),
+    //       gender: new RegExp(`\\b${gender}\\b`, 'i'),
+    //       price: { $gte: minPrice, $lte: maxPrice }
+    //     }
+    //   )?.sort(sortOption)?.skip(skip)?.limit(limit);
+
+    //   if (result?.length > 0) {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         status: "Success",
+    //         message: "Categorize products retrieved successfully",
+    //         totalProducts,
+    //         data: result,
+    //       }),
+    //       { status: 200 }
+    //     );
+    //   }
+    //   else {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         message: "No products available of this category or gender",
+    //       }),
+    //       { status: 404 }
+    //     );
+    //   }
+    // }
+
+    // // Get only categorize products
+    // if (category && !isNaN(minPrice) && !isNaN(maxPrice)) {
+    //   await mongoose.connect(process.env.DATABASE_URL);
+
+    //   // total products count
+    //   const totalProducts = await Product.countDocuments(
+    //     {
+    //       category: new RegExp(`\\b${category}\\b`, 'i'),
+    //       price: { $gte: minPrice, $lte: maxPrice }
+    //     }
+    //   );
+    //   // result
+    //   const result = await Product?.find({
+    //     category: new RegExp(`\\b${category}\\b`, 'i'),
+    //     price: { $gte: minPrice, $lte: maxPrice }
+    //   })?.skip(skip)?.limit(limit);;
+
+    //   if (result?.length > 0) {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         status: "Success",
+    //         message: "Categorize products retrieved successfully",
+    //         totalProducts,
+    //         data: result,
+    //       }),
+    //       { status: 200 }
+    //     );
+    //   }
+    //   else {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         message: "No products available of this category or gender",
+    //       }),
+    //       { status: 404 }
+    //     );
+    //   }
+    // }
+
+    // // Get only gender based products
+    // if (gender && !isNaN(minPrice) && !isNaN(maxPrice)) {
+    //   await mongoose.connect(process.env.DATABASE_URL);
+
+    //   // total products count
+    //   const totalProducts = await Product.countDocuments(
+    //     {
+    //       gender: new RegExp(`\\b${gender}\\b`, 'i'),
+    //       price: { $gte: minPrice, $lte: maxPrice }
+    //     }
+    //   );
+    //   // result
+    //   const result = await Product?.find({
+    //     gender: new RegExp(`\\b${gender}\\b`, 'i'),
+    //     price: { $gte: minPrice, $lte: maxPrice }
+    //   })?.skip(skip)?.limit(limit);;
+    //   if (result?.length > 0) {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         status: "Success",
+    //         message: "Categorize products retrieved successfully",
+    //         totalProducts,
+    //         data: result,
+    //       }),
+    //       { status: 200 }
+    //     );
+    //   }
+    //   else {
+    //     return new NextResponse(
+    //       JSON.stringify({
+    //         message: "No products available of this category or gender",
+    //       }),
+    //       { status: 404 }
+    //     );
+    //   }
+    // }
